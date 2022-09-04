@@ -1,105 +1,101 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+theme name:    Immersive Revisisted (ES-DE Edition)
+author:        anthonycaccese
+inspired by:   https://github.com/DarrenCarol/Immersive
+license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
+-->
+
 <theme>
-	<formatVersion>7</formatVersion>
-	<include>./art/icons/menuicons.xml</include>
-	<include>./art/menu/menu.xml</include>
 
-	<view name="screen">
-    
-	  	<controllerActivity name="controllerActivity">
-			<pos>0.01 0.96</pos>
-			<size>0.085 0.025</size>
-			<itemSpacing>0.003</itemSpacing>
-			<imagePath>./art/icons/gamepad.svg</imagePath>
-			<color>FFFFFF90</color>
-			<activityColor>FFFFFF</activityColor>
-			<hotkeyColor>3498DB</hotkeyColor>
-			<verticalAlignment>center</verticalAlignment>
-		</controllerActivity>		
-	
-		<batteryIndicator name="batteryIndicator">
-			<pos>0.955 0.0125</pos>
-			<size>0.033 0.033</size>
-			<incharge>./art/battery/incharge.svg</incharge>
-			<full>./art/battery/full.svg</full>
-			<at75>./art/battery/75.svg</at75>
-			<at50>./art/battery/50.svg</at50>
-			<at25>./art/battery/25.svg</at25>
-			<empty>./art/battery/empty.svg</empty>
-			<color>FFFFFFA0</color>
-		</batteryIndicator>
-	
-		<batteryIndicator name="batteryIndicator" tinyScreen="true">
-			<pos>0.915 0.013</pos>
-			<size>0.07 0.07</size>
-		</batteryIndicator>
-	</view>
-	
-	<view name="system, basic, detailed">
-		<image name="logo">
-			<path>./art/logos/${system.theme}.png</path>
-			<path>./art/logos/${system.theme}.svg</path>
-		</image>
+   <variables>
+      <spacerImage>./_inc/images/space.png</spacerImage>
+   </variables>
 
-		<image name="background" extra="true">
-			<path>./art/background.png</path>
-			<pos>0 0</pos>
-			<size>1 1</size>
-		</image>
+   <view name="system,gamelist">
+      <image name="background">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>000000</color>
+         <zIndex>0</zIndex>
+      </image>
+      <image name="mask">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>./_inc/images/background.png</path>
+         <zIndex>2</zIndex>
+      </image>
+      <textlist name="system-list,game-list">
+         <origin>0 1</origin>
+         <pos>0.05 0.84</pos>
+         <size>0.9 0.09</size>
+         <fontSize>0.07</fontSize>
+         <lineSpacing>1</lineSpacing>
+         <horizontalAlignment>left</horizontalAlignment>
+         <selectedColor>ffffff</selectedColor>
+         <selectorColor>00000000</selectorColor>
+         <primaryColor>00000000</primaryColor>
+         <secondaryColor>00000000</secondaryColor>
+         <zIndex>100</zIndex>
+      </textlist>
+      <text name="system-info">
+         <origin>0 1</origin>
+         <pos>.05 .90</pos>
+         <size>0 0.05</size>
+         <fontSize>0.05</fontSize>
+         <color>ffffff88</color>
+         <backgroundColor>FF000000</backgroundColor>
+         <zIndex>100</zIndex>
+      </text>
+      <helpsystem name="help">
+         <origin>0 1</origin>
+         <pos>0.05 0.95</pos>
+         <fontSize>0.03</fontSize>
+         <textColor>ffffff44</textColor>
+         <iconColor>ffffff44</iconColor>
+      </helpsystem>
+      <video name="background-video">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <maxSize>1.4 2</maxSize>
+         <delay>3</delay>
+         <imageType>screenshot,fanart</imageType>
+         <opacity>0.6</opacity>
+         <zIndex>1</zIndex>
+      </video>
+   </view>
 
-		<helpsystem name="help">
-<pos>1.0 1.0</pos>
-		</helpsystem>
-	</view>
+   <view name="system">
+      <gameselector name="selector-random">
+         <selection>random</selection>
+      </gameselector>
+      <textlist name="system-list">
+         <letterCase>capitalize</letterCase>
+      </textlist>
+      <text name="system-info">
+         <systemdata>gamecount</systemdata>
+      </text>
+      <video name="background-video">
+         <gameselector>selector-random</gameselector>
+      </video>
+   </view>
 
-	<view name="basic">
-			<image name="logo">
-			<path>./art/logos/${system.theme}.png</path>
-			<path>./art/logos/${system.theme}.svg</path>
-			<origin>0.5 0.5</origin>
-			<alignment>left</alignment>
-			<pos>0.5 0.1</pos>
-			<maxSize>0.3 0.12</maxSize>
-		</image>
+   <view name="gamelist">
+      <image name="cover-art">
+         <origin>0 1</origin>
+         <pos>0.05 0.74</pos>
+         <maxSize>0.2 0.3</maxSize>
+         <imageType>physicalmedia,cover,3dbox</imageType>
+      </image>
+      <textlist name="game-list"></textlist>
+      <text name="system-info">
+         <text>${system.fullName}</text>
+         <letterCase>capitalize</letterCase>
+      </text>
+      <video name="background-video"></video>
+   </view>
 
-		<image name="back-gamelist" extra="true">
-			<pos>0.25 0.188</pos>
-			<size>0.5 0.745</size>
-			<path>./art/assets/back.png</path>
-		</image>
-
-		<textlist name="gamelist">
-			<pos>0.25 0.212962962962963</pos>
-			<size>0.5 0.7222222222222222</size>
-			<selectorColor>CCCCCC</selectorColor> <!-- Selection bar -->
-			<selectedColor>262626</selectedColor> <!-- Selection letters -->
-			<primaryColor>ffffff</primaryColor> <!-- Letters -->
-			<secondaryColor>9F9F9F</secondaryColor>
-			<fontPath>./art/fonts/TitilliumWeb-SemiBold.ttf</fontPath>
-			<fontSize>0.025</fontSize>
-			<alignment>center</alignment>
-			<horizontalMargin>0.01</horizontalMargin>
-			<scrollSound>./art/sound/scroll.wav</scrollSound>
-		</textlist>
-	</view>
-
-	<view name="detailed">
-		<image name="back-logo" extra="true">
-			<path>./art/assets/header.png</path>
-		</image>
-
-		<image name="logo">
-			<path>./art/logos/${system.theme}.png</path>
-			<path>./art/logos/${system.theme}.svg</path>
-		</image>
-
-		<video name="md_video">
-      		<delay>0.0</delay>
-			<showSnapshotNoVideo>false</showSnapshotNoVideo>
-			<showSnapshotDelay>false</showSnapshotDelay>
-			<loops>10</loops>
-		</video>
-	</view>
-
-	<include subset="layout" name="immersive" displayName="Immersive">./art/layouts/immersive.xml</include>
 </theme>
