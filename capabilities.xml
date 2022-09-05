@@ -1,1 +1,13 @@
-<themeCapabilities></themeCapabilities>
+<themeCapabilities>
+
+   <variant name="metadataOff">
+      <label>Metadata Off</label>
+      <selectable>true</selectable>
+   </variant>
+
+   <variant name="metadataOn">
+      <label>Metadata On</label>
+      <selectable>true</selectable>
+   </variant>
+
+</themeCapabilities>

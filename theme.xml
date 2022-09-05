@@ -8,55 +8,50 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
 <theme>
 
    <variables>
+      <boldFont>./_inc/fonts/RedHatDisplay-Bold.ttf</boldFont>
+      <regularFont>./_inc/fonts/RedHatDisplay-Regular.ttf</regularFont>
       <spacerImage>./_inc/images/space.png</spacerImage>
    </variables>
 
    <view name="system,gamelist">
-      <image name="background">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size>
-         <path>${spacerImage}</path>
-         <tile>true</tile>
-         <color>000000</color>
-         <zIndex>0</zIndex>
-      </image>
-      <image name="mask">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size>
-         <path>./_inc/images/background.png</path>
-         <zIndex>2</zIndex>
-      </image>
-      <textlist name="system-list,game-list">
+      <image name="system-art,game-art">
          <origin>0 1</origin>
-         <pos>0.05 0.84</pos>
-         <size>0.9 0.09</size>
-         <fontSize>0.07</fontSize>
-         <lineSpacing>1</lineSpacing>
-         <horizontalAlignment>left</horizontalAlignment>
-         <selectedColor>ffffff</selectedColor>
-         <selectorColor>00000000</selectorColor>
-         <primaryColor>00000000</primaryColor>
-         <secondaryColor>00000000</secondaryColor>
+         <pos>0.05 0.74</pos>
          <zIndex>100</zIndex>
-      </textlist>
+      </image>
+      <text name="system-name,game-name">
+         <origin>0 1</origin>
+         <pos>0.05 0.83</pos>
+         <size>0.9 0.06</size>
+         <fontSize>0.06</fontSize>
+         <color>ffffff</color>
+         <fontPath>${boldFont}</fontPath>
+         <zIndex>100</zIndex>
+      </text>
       <text name="system-info">
          <origin>0 1</origin>
-         <pos>.05 .90</pos>
-         <size>0 0.05</size>
-         <fontSize>0.05</fontSize>
+         <pos>.05 .89</pos>
+         <size>0 0.04</size>
+         <fontSize>0.04</fontSize>
+         <fontPath>${regularFont}</fontPath>
          <color>ffffff88</color>
          <backgroundColor>FF000000</backgroundColor>
          <zIndex>100</zIndex>
       </text>
       <helpsystem name="help">
          <origin>0 1</origin>
-         <pos>0.05 0.95</pos>
-         <fontSize>0.03</fontSize>
-         <textColor>ffffff44</textColor>
-         <iconColor>ffffff44</iconColor>
+         <pos>0.05 0.94</pos>
+         <fontSize>0.026</fontSize>
+         <textColor>ffffff55</textColor>
+         <iconColor>ffffff33</iconColor>
       </helpsystem>
+      <image name="mask">
+         <origin>0 1</origin>
+         <pos>0 1</pos>
+         <size>1 1</size>
+         <path>./_inc/images/background.png</path>
+         <zIndex>2</zIndex>
+      </image>
       <video name="background-video">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
@@ -66,36 +61,112 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <opacity>0.6</opacity>
          <zIndex>1</zIndex>
       </video>
+      <image name="background">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>000000</color>
+         <zIndex>0</zIndex>
+      </image>
    </view>
 
    <view name="system">
-      <gameselector name="selector-random">
-         <selection>random</selection>
-      </gameselector>
-      <textlist name="system-list">
+      <image name="system-art">
+         <maxSize>0.2 0.3</maxSize>
+         <path>./_inc/systems/${system.theme}.png</path>
+      </image>
+      <text name="system-name">
+         <text>${system.fullName}</text>
          <letterCase>capitalize</letterCase>
-      </textlist>
+      </text>
       <text name="system-info">
          <systemdata>gamecount</systemdata>
       </text>
+      <carousel name="system-list">
+         <origin>0 0</origin>
+         <pos>1 1</pos>
+         <size>0 0</size>
+         <zIndex>0</zIndex>
+      </carousel>
+      <gameselector name="selector-random">
+         <selection>random</selection>
+      </gameselector>
       <video name="background-video">
          <gameselector>selector-random</gameselector>
       </video>
    </view>
 
    <view name="gamelist">
-      <image name="cover-art">
-         <origin>0 1</origin>
-         <pos>0.05 0.74</pos>
-         <maxSize>0.2 0.3</maxSize>
+      <image name="game-art">
+         <maxSize>0.15 0.3</maxSize>
          <imageType>physicalmedia,cover,3dbox</imageType>
       </image>
-      <textlist name="game-list"></textlist>
+      <text name="game-name">
+         <metadata>name</metadata>
+      </text>
       <text name="system-info">
          <text>${system.fullName}</text>
          <letterCase>capitalize</letterCase>
       </text>
+      <textlist name="game-list">
+         <origin>0 0</origin>
+         <pos>1 1</pos>
+         <size>0 0</size>
+         <selectedColor>00000000</selectedColor>
+         <selectorColor>00000000</selectorColor>
+         <primaryColor>00000000</primaryColor>
+         <secondaryColor>00000000</secondaryColor>
+         <zIndex>0</zIndex>
+      </textlist>
       <video name="background-video"></video>
    </view>
+
+   <variant name="metadataOn">
+      <view name="gamelist">
+         <image name="game-art">
+            <pos>0.05 0.38</pos>
+         </image>
+         <text name="game-name">
+            <pos>0.05 0.47</pos>
+         </text>
+         <text name="system-info">
+            <pos>0.05 0.53</pos>
+         </text>
+         <rating name="rating">
+            <pos>0.048 0.54</pos>
+            <size>0 0.04</size>
+            <color>ffffff55</color>
+            <filledPath>./_inc/images/utility/star-filled.svg</filledPath>
+            <unfilledPath>./_inc/images/utility/star-empty.svg</unfilledPath>
+            <overlay>false</overlay>
+            <zIndex>100</zIndex>
+         </rating>
+         <datetime name="releasedate">
+            <pos>0.17 0.54</pos>
+            <size>0.8 0.04</size>
+            <fontSize>0.04</fontSize>
+            <fontPath>${regularFont}</fontPath>
+            <metadata>releasedate</metadata>
+            <color>ffffff44</color>
+            <zIndex>100</zIndex>
+         </datetime>
+         <text name="description">
+            <origin>0 0</origin>
+            <pos>0.05 0.63</pos>
+            <size>0.4 0.24</size>
+            <fontSize>0.04</fontSize>
+            <fontPath>${regularFont}</fontPath>
+            <metadata>description</metadata>
+            <color>DDDDDD</color>
+            <container>true</container>
+            <zIndex>100</zIndex>
+         </text>
+         <video name="background-video">
+            <opacity>0.2</opacity>
+         </video>
+      </view>
+   </variant>
 
 </theme>
