@@ -79,7 +79,6 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </image>
       <text name="system-name">
          <text>${system.fullName}</text>
-         <letterCase>capitalize</letterCase>
       </text>
       <text name="system-info">
          <systemdata>gamecount</systemdata>
@@ -108,7 +107,6 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </text>
       <text name="system-info">
          <text>${system.fullName}</text>
-         <letterCase>capitalize</letterCase>
       </text>
       <textlist name="game-list">
          <origin>0 0</origin>
