@@ -2,10 +2,9 @@
 A simple theme for the version of EmulationStation used in [ES-DE](https://es-de.org/) v2.x.
 
 ## **Preview**
-
 | System View | Gamelist View |
 |----|----|
-| ![Screen Shot 2022-09-04 at 15 48 48](https://user-images.githubusercontent.com/1454947/188331584-0670b9ae-b75b-480c-a9c5-bdf4ace53eba.png) | ![Screen Shot 2022-09-04 at 15 48 37](https://user-images.githubusercontent.com/1454947/188331587-a4dda6d0-206c-46c7-9529-199374cc72fb.png) |
+| ![System View](https://user-images.githubusercontent.com/1454947/188538472-8c78c3c0-1038-419f-a2dd-28ca11198acc.png) | ![Gamelist View](https://user-images.githubusercontent.com/1454947/188538524-eb9cdcba-9a28-4672-aecc-97800af8dda6.png) |
 
 ## **License**
 Creative Commons CC-BY-NC-SA - https://creativecommons.org/licenses/by-nc-sa/2.0/
