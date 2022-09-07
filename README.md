@@ -1,5 +1,5 @@
 # Immersive Revisited (ES-DE Version)
-A simple theme for the version of EmulationStation used in [ES-DE](https://es-de.org/) v2.x.  The design inspired by the great work by Darren Carol (aka Mr. Overlay) on the [Immersive theme](https://github.com/DarrenCarol/Immersive) for Batocera.
+A simple theme for the version of EmulationStation used in [ES-DE](https://es-de.org/) v2.x.  The design is inspired by the great work by Darren Carol (aka Mr. Overlay) on the [Immersive theme](https://github.com/DarrenCarol/Immersive) for Batocera.
 
 ## Changes Made from the Batocera version
 * Removed all Batocera specific elements to make the theme compatible with ES-DE's theming engine
