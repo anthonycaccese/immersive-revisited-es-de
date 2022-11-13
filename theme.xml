@@ -19,7 +19,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <pos>0.05 0.74</pos>
          <zIndex>100</zIndex>
       </image>
-      <text name="system-name,game-name">
+      <text name="system-name,collection-name,game-name">
          <origin>0 1</origin>
          <pos>0.05 0.83</pos>
          <size>0.9 0.06</size>
@@ -28,7 +28,10 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <fontPath>${boldFont}</fontPath>
          <zIndex>100</zIndex>
       </text>
-      <text name="system-info">
+      <text name="collection-name">
+         <letterCase>capitalize</letterCase>
+      </text>
+      <text name="system-info,collection-info">
          <origin>0 1</origin>
          <pos>.05 .89</pos>
          <size>0 0.04</size>
@@ -78,7 +81,10 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <path>./_inc/systems/${system.theme}.png</path>
       </image>
       <text name="system-name">
-         <text>${system.fullName}</text>
+         <text>${system.fullName.noCollections}</text>
+      </text>
+      <text name="collection-name">
+         <text>${system.fullName.collections}</text>
       </text>
       <text name="system-info">
          <systemdata>gamecount</systemdata>
@@ -106,18 +112,18 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <metadata>name</metadata>
       </text>
       <text name="system-info">
-         <text>${system.fullName}</text>
+         <text>${system.fullName.noCollections}</text>
       </text>
-      <textlist name="game-list">
+      <text name="collection-info">
+         <text>${system.fullName.collections}</text>
+         <letterCase>capitalize</letterCase>
+      </text>
+      <carousel name="game-list">
          <origin>0 0</origin>
          <pos>1 1</pos>
          <size>0 0</size>
-         <selectedColor>00000000</selectedColor>
-         <selectorColor>00000000</selectorColor>
-         <primaryColor>00000000</primaryColor>
-         <secondaryColor>00000000</secondaryColor>
          <zIndex>0</zIndex>
-      </textlist>
+      </carousel>
       <video name="background-video"></video>
    </view>
 
@@ -129,7 +135,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <text name="game-name">
             <pos>0.05 0.47</pos>
          </text>
-         <text name="system-info">
+         <text name="system-info,collection-info">
             <pos>0.05 0.53</pos>
          </text>
          <rating name="rating">
@@ -142,7 +148,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <zIndex>100</zIndex>
          </rating>
          <datetime name="releasedate">
-            <pos>0.17 0.54</pos>
+            <pos>0.18 0.54</pos>
             <size>0.8 0.04</size>
             <fontSize>0.04</fontSize>
             <fontPath>${regularFont}</fontPath>
@@ -152,7 +158,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </datetime>
          <text name="description">
             <origin>0 0</origin>
-            <pos>0.05 0.63</pos>
+            <pos>0.05 0.60</pos>
             <size>0.4 0.24</size>
             <fontSize>0.04</fontSize>
             <fontPath>${regularFont}</fontPath>
