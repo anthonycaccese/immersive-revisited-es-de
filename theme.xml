@@ -123,6 +123,15 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <pos>1 1</pos>
          <size>0 0</size>
          <zIndex>0</zIndex>
+         <!--<origin>1 0</origin>
+         <pos>1 0</pos>
+         <size>1 0.5</size>
+         <color>00000000</color>
+         <type>horizontal_wheel</type>
+         <imageType>cover</imageType>
+         <wheelHorizontalAlignment>right</wheelHorizontalAlignment>
+         <itemRotationOrigin>3 0.5</itemRotationOrigin>
+         <zIndex>20</zIndex>-->
       </carousel>
       <video name="background-video"></video>
    </view>
@@ -142,8 +151,8 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <pos>0.048 0.54</pos>
             <size>0 0.04</size>
             <color>ffffff55</color>
-            <filledPath>./_inc/images/utility/star-filled.svg</filledPath>
-            <unfilledPath>./_inc/images/utility/star-empty.svg</unfilledPath>
+            <filledPath>./_inc/images/star-filled.svg</filledPath>
+            <unfilledPath>./_inc/images/star-empty.svg</unfilledPath>
             <overlay>false</overlay>
             <zIndex>100</zIndex>
          </rating>
