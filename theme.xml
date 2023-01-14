@@ -83,9 +83,9 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <text name="system-name">
          <text>${system.fullName.noCollections}</text>
       </text>
-      <text name="collection-name">
+      <!--<text name="collection-name">
          <text>${system.fullName.collections}</text>
-      </text>
+      </text>-->
       <text name="system-info">
          <systemdata>gamecount</systemdata>
       </text>
@@ -114,10 +114,10 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <text name="system-info">
          <text>${system.fullName.noCollections}</text>
       </text>
-      <text name="collection-info">
+      <!--<text name="collection-info">
          <text>${system.fullName.collections}</text>
          <letterCase>capitalize</letterCase>
-      </text>
+      </text>-->
       <carousel name="game-list">
          <origin>0 0</origin>
          <pos>1 1</pos>
