@@ -1,0 +1,11 @@
+<theme>
+   <include>./../theme.xml</include>
+   <view name="system">
+      <gameselector name="selector-lastplayed">
+         <selection>lastplayed</selection>
+      </gameselector>
+   	<video name="background-video">
+         <gameselector>selector-lastplayed</gameselector>
+   	</video>
+   </view>
+</theme>

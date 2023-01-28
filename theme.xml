@@ -19,7 +19,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <pos>0.05 0.74</pos>
          <zIndex>100</zIndex>
       </image>
-      <text name="system-name,collection-name,game-name">
+      <text name="system-name,auto-collection-name,custom-collection-name,game-name">
          <origin>0 1</origin>
          <pos>0.05 0.83</pos>
          <size>0.9 0.06</size>
@@ -28,10 +28,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <fontPath>${boldFont}</fontPath>
          <zIndex>100</zIndex>
       </text>
-      <text name="collection-name">
-         <letterCase>capitalize</letterCase>
-      </text>
-      <text name="system-info,collection-info">
+      <text name="system-info,game-info">
          <origin>0 1</origin>
          <pos>.05 .89</pos>
          <size>0 0.04</size>
@@ -40,6 +37,9 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <color>ffffff88</color>
          <backgroundColor>FF000000</backgroundColor>
          <zIndex>100</zIndex>
+      </text>
+      <text name="auto-collection-name">
+         <letterCase>capitalize</letterCase>
       </text>
       <helpsystem name="help">
          <origin>0 1</origin>
@@ -83,9 +83,12 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <text name="system-name">
          <text>${system.fullName.noCollections}</text>
       </text>
-      <!--<text name="collection-name">
-         <text>${system.fullName.collections}</text>
-      </text>-->
+      <text name="auto-collection-name">
+         <text>${system.fullName.autoCollections}</text>
+      </text>
+      <text name="custom-collection-name">
+         <text>${system.fullName.customCollections}</text>
+      </text>
       <text name="system-info">
          <systemdata>gamecount</systemdata>
       </text>
@@ -111,27 +114,15 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <text name="game-name">
          <metadata>name</metadata>
       </text>
-      <text name="system-info">
-         <text>${system.fullName.noCollections}</text>
-      </text>
-      <!--<text name="collection-info">
-         <text>${system.fullName.collections}</text>
+      <text name="game-info">
+         <metadata>systemFullname</metadata>
          <letterCase>capitalize</letterCase>
-      </text>-->
+      </text>
       <carousel name="game-list">
          <origin>0 0</origin>
          <pos>1 1</pos>
          <size>0 0</size>
          <zIndex>0</zIndex>
-         <!--<origin>1 0</origin>
-         <pos>1 0</pos>
-         <size>1 0.5</size>
-         <color>00000000</color>
-         <type>horizontal_wheel</type>
-         <imageType>cover</imageType>
-         <wheelHorizontalAlignment>right</wheelHorizontalAlignment>
-         <itemRotationOrigin>3 0.5</itemRotationOrigin>
-         <zIndex>20</zIndex>-->
       </carousel>
       <video name="background-video"></video>
    </view>
@@ -144,7 +135,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <text name="game-name">
             <pos>0.05 0.47</pos>
          </text>
-         <text name="system-info,collection-info">
+         <text name="game-info">
             <pos>0.05 0.53</pos>
          </text>
          <rating name="rating">

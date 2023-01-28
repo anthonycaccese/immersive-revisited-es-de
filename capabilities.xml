@@ -1,10 +1,27 @@
 <themeCapabilities>
+   
+   <themeName>Immersive (Revisited)</themeName>
+
+   <transitions name="transitions">
+      <label>transitions</label>
+      <selectable>false</selectable>
+      <systemToSystem>instant</systemToSystem>
+      <systemToGamelist>instant</systemToGamelist>
+      <gamelistToGamelist>instant</gamelistToGamelist>
+      <gamelistToSystem>instant</gamelistToSystem>
+      <startupToSystem>instant</startupToSystem>
+      <startupToGamelist>instant</startupToGamelist>
+   </transitions>
+   <suppressTransitionProfiles>
+      <entry>builtin-instant</entry>
+      <entry>builtin-slide</entry>
+      <entry>builtin-fade</entry>
+   </suppressTransitionProfiles>
 
    <variant name="metadataOff">
       <label>Metadata Off</label>
       <selectable>true</selectable>
    </variant>
-
    <variant name="metadataOn">
       <label>Metadata On</label>
       <selectable>true</selectable>
