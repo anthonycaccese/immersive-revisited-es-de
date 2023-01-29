@@ -14,6 +14,19 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    </variables>
 
    <view name="system,gamelist">
+      <carousel name="system-list">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <color>dddddd</color>
+         <itemTransitions>instant</itemTransitions>
+         <itemSize>0.2 0.4</itemSize><!-- 256 288  -->
+         <itemScale>1</itemScale>
+         <maxItemCount>4</maxItemCount>
+         <selectedItemMargins>0 0.2</selectedItemMargins>
+         <horizontalOffset>-0.1</horizontalOffset>
+         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
+      </carousel>
       <text name="system-name,auto-collection-name,custom-collection-name,game-name">
          <origin>0 1</origin>
          <pos>0.5234375 0.49</pos><!-- 670 50% -->
@@ -71,18 +84,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <systemdata>gamecount</systemdata>
       </text>
       <carousel name="system-list">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size>
-         <color>dddddd</color>
          <staticImage>./_inc/systems/${system.theme}.png</staticImage>
-         <itemTransitions>instant</itemTransitions>
-         <itemSize>0.2 0.4</itemSize><!-- 256 288  -->
-         <itemScale>1</itemScale>
-         <maxItemCount>4</maxItemCount>
-         <selectedItemMargins>0 0.2</selectedItemMargins>
-         <horizontalOffset>-0.1</horizontalOffset>
-         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
       </carousel>
    </view>
 
@@ -95,18 +97,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <letterCase>capitalize</letterCase>
       </text>
       <carousel name="game-list">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size>
-         <color>dddddd</color>
          <imageType>cover,physicalmedia,3dbox</imageType>
-         <itemTransitions>instant</itemTransitions>
-         <itemSize>0.2 0.4</itemSize><!-- 256 288  -->
-         <itemScale>1</itemScale>
-         <maxItemCount>4</maxItemCount>
-         <selectedItemMargins>0 0.2</selectedItemMargins>
-         <horizontalOffset>-0.1</horizontalOffset>
-         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
       </carousel>
    </view>
 
