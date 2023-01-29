@@ -14,72 +14,50 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    </variables>
 
    <view name="system,gamelist">
-      <image name="system-art,game-art">
-         <origin>0 1</origin>
-         <pos>0.05 0.74</pos>
-         <zIndex>100</zIndex>
-      </image>
       <text name="system-name,auto-collection-name,custom-collection-name,game-name">
          <origin>0 1</origin>
-         <pos>0.05 0.83</pos>
-         <size>0.9 0.06</size>
-         <fontSize>0.06</fontSize>
-         <color>ffffff</color>
+         <pos>0.5234375 0.49</pos><!-- 670 50% -->
+         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
+         <fontSize>0.044444444444444</fontSize><!-- 32 -->
+         <color>111111</color>
          <fontPath>${boldFont}</fontPath>
          <zIndex>100</zIndex>
+         <verticalAlignment>bottom</verticalAlignment>
+         <lineSpacing>1</lineSpacing>
       </text>
+      <image name="carousel-seperator">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <size>0.0015625 0.277777777777778</size>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>00000011</color>
+         <zIndex>200</zIndex>
+      </image>
       <text name="system-info,game-info">
-         <origin>0 1</origin>
-         <pos>.05 .89</pos>
-         <size>0 0.04</size>
-         <fontSize>0.04</fontSize>
+         <origin>0 0</origin>
+         <pos>0.5234375 0.49</pos><!-- 670 50% -->
+         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
+         <fontSize>0.033333333333333</fontSize><!-- 24 -->
          <fontPath>${regularFont}</fontPath>
-         <color>ffffff88</color>
-         <backgroundColor>FF000000</backgroundColor>
+         <color>444444</color>
          <zIndex>100</zIndex>
+         <verticalAlignment>top</verticalAlignment>
+         <lineSpacing>1</lineSpacing>
       </text>
       <text name="auto-collection-name">
          <letterCase>capitalize</letterCase>
       </text>
       <helpsystem name="help">
-         <origin>0 1</origin>
-         <pos>0.05 0.94</pos>
+         <origin>0.5 1</origin>
+         <pos>0.5 0.94</pos>
          <fontSize>0.026</fontSize>
-         <textColor>ffffff55</textColor>
-         <iconColor>ffffff33</iconColor>
+         <textColor>00000055</textColor>
+         <iconColor>00000033</iconColor>
       </helpsystem>
-      <image name="mask">
-         <origin>0 1</origin>
-         <pos>0 1</pos>
-         <size>1 1</size>
-         <path>./_inc/images/background.png</path>
-         <zIndex>2</zIndex>
-      </image>
-      <video name="background-video">
-         <origin>0.5 0.5</origin>
-         <pos>0.5 0.5</pos>
-         <maxSize>1.4 2</maxSize>
-         <delay>3</delay>
-         <imageType>screenshot,fanart</imageType>
-         <opacity>0.6</opacity>
-         <zIndex>1</zIndex>
-      </video>
-      <image name="background">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size>
-         <path>${spacerImage}</path>
-         <tile>true</tile>
-         <color>000000</color>
-         <zIndex>0</zIndex>
-      </image>
    </view>
 
    <view name="system">
-      <image name="system-art">
-         <maxSize>0.2 0.3</maxSize>
-         <path>./_inc/systems/${system.theme}.png</path>
-      </image>
       <text name="system-name">
          <text>${system.fullName.noCollections}</text>
       </text>
@@ -94,23 +72,21 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </text>
       <carousel name="system-list">
          <origin>0 0</origin>
-         <pos>1 1</pos>
-         <size>0 0</size>
-         <zIndex>0</zIndex>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <color>dddddd</color>
+         <staticImage>./_inc/systems/${system.theme}.png</staticImage>
+         <itemTransitions>instant</itemTransitions>
+         <itemSize>0.2 0.4</itemSize><!-- 256 288  -->
+         <itemScale>1</itemScale>
+         <maxItemCount>4</maxItemCount>
+         <selectedItemMargins>0 0.2</selectedItemMargins>
+         <horizontalOffset>-0.1</horizontalOffset>
+         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
       </carousel>
-      <gameselector name="selector-random">
-         <selection>random</selection>
-      </gameselector>
-      <video name="background-video">
-         <gameselector>selector-random</gameselector>
-      </video>
    </view>
 
    <view name="gamelist">
-      <image name="game-art">
-         <maxSize>0.15 0.3</maxSize>
-         <imageType>physicalmedia,cover,3dbox</imageType>
-      </image>
       <text name="game-name">
          <metadata>name</metadata>
       </text>
@@ -120,57 +96,18 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </text>
       <carousel name="game-list">
          <origin>0 0</origin>
-         <pos>1 1</pos>
-         <size>0 0</size>
-         <zIndex>0</zIndex>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <color>dddddd</color>
+         <imageType>cover,physicalmedia,3dbox</imageType>
+         <itemTransitions>instant</itemTransitions>
+         <itemSize>0.2 0.4</itemSize><!-- 256 288  -->
+         <itemScale>1</itemScale>
+         <maxItemCount>4</maxItemCount>
+         <selectedItemMargins>0 0.2</selectedItemMargins>
+         <horizontalOffset>-0.1</horizontalOffset>
+         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
       </carousel>
-      <video name="background-video"></video>
    </view>
-
-   <variant name="metadataOn">
-      <view name="gamelist">
-         <image name="game-art">
-            <pos>0.05 0.38</pos>
-         </image>
-         <text name="game-name">
-            <pos>0.05 0.47</pos>
-         </text>
-         <text name="game-info">
-            <pos>0.05 0.53</pos>
-         </text>
-         <rating name="rating">
-            <pos>0.048 0.54</pos>
-            <size>0 0.04</size>
-            <color>ffffff55</color>
-            <filledPath>./_inc/images/star-filled.svg</filledPath>
-            <unfilledPath>./_inc/images/star-empty.svg</unfilledPath>
-            <overlay>false</overlay>
-            <zIndex>100</zIndex>
-         </rating>
-         <datetime name="releasedate">
-            <pos>0.18 0.54</pos>
-            <size>0.8 0.04</size>
-            <fontSize>0.04</fontSize>
-            <fontPath>${regularFont}</fontPath>
-            <metadata>releasedate</metadata>
-            <color>ffffff44</color>
-            <zIndex>100</zIndex>
-         </datetime>
-         <text name="description">
-            <origin>0 0</origin>
-            <pos>0.05 0.60</pos>
-            <size>0.4 0.24</size>
-            <fontSize>0.04</fontSize>
-            <fontPath>${regularFont}</fontPath>
-            <metadata>description</metadata>
-            <color>DDDDDD</color>
-            <container>true</container>
-            <zIndex>100</zIndex>
-         </text>
-         <video name="background-video">
-            <opacity>0.2</opacity>
-         </video>
-      </view>
-   </variant>
 
 </theme>
