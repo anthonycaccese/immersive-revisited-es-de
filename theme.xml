@@ -14,91 +14,139 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    </variables>
 
    <view name="system,gamelist">
-      <carousel name="system-list">
+      <image name="background">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
-         <color>dddddd</color>
-         <itemTransitions>instant</itemTransitions>
-         <itemSize>0.2 0.4</itemSize><!-- 256 288  -->
-         <itemScale>1</itemScale>
-         <maxItemCount>4</maxItemCount>
-         <selectedItemMargins>0 0.2</selectedItemMargins>
-         <horizontalOffset>-0.1</horizontalOffset>
-         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
-      </carousel>
-      <text name="system-name,auto-collection-name,custom-collection-name,game-name">
-         <origin>0 1</origin>
-         <pos>0.5234375 0.49</pos><!-- 670 50% -->
-         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
-         <fontSize>0.044444444444444</fontSize><!-- 32 -->
-         <color>111111</color>
-         <fontPath>${boldFont}</fontPath>
-         <zIndex>100</zIndex>
-         <verticalAlignment>bottom</verticalAlignment>
-         <lineSpacing>1</lineSpacing>
-      </text>
-      <image name="carousel-seperator">
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>000000</color>
+         <zIndex>0</zIndex>
+      </image>
+      <image name="background-art">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <maxSize>1.4 2</maxSize>
+         <opacity>0.2</opacity>
+         <zIndex>1</zIndex>
+      </image>
+      <image name="mask">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>./_inc/images/mask.png</path>
+         <zIndex>2</zIndex>
+      </image>
+      <image name="seperator">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>0.0015625 0.277777777777778</size>
          <path>${spacerImage}</path>
          <tile>true</tile>
-         <color>00000011</color>
-         <zIndex>200</zIndex>
+         <color>222222</color>
       </image>
-      <text name="system-info,game-info">
+      <carousel name="carousel">
          <origin>0 0</origin>
-         <pos>0.5234375 0.49</pos><!-- 670 50% -->
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <color>00000000</color>
+         <itemTransitions>animate</itemTransitions>
+         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
+         <itemSize>0.15625 0.361111111111111</itemSize><!-- 200 260  -->
+         <itemScale>1.5</itemScale>
+         <maxItemCount>3</maxItemCount>
+         <selectedItemMargins>-0.09375 0.1875</selectedItemMargins><!-- -120 240 -->
+         <horizontalOffset>-0.140625</horizontalOffset><!-- -180 -->
+         <fontPath>${boldFont}</fontPath>
+         <fontSize>0.025</fontSize><!-- 18 -->
+         <textColor>ffffff</textColor>
+         <textBackgroundColor>222222</textBackgroundColor>
+      </carousel>
+      <text name="system-name,auto-collection-name,custom-collection-name,game-name">
+         <origin>0 1</origin>
          <size>0.234375 0.208333333333333</size><!-- 300 150 -->
-         <fontSize>0.033333333333333</fontSize><!-- 24 -->
-         <fontPath>${regularFont}</fontPath>
-         <color>444444</color>
-         <zIndex>100</zIndex>
-         <verticalAlignment>top</verticalAlignment>
+         <fontSize>0.044444444444444</fontSize><!-- 32 -->
+         <color>ffffff</color>
+         <fontPath>${boldFont}</fontPath>
+         <verticalAlignment>bottom</verticalAlignment>
          <lineSpacing>1</lineSpacing>
-      </text>
-      <text name="auto-collection-name">
-         <letterCase>capitalize</letterCase>
+         <systemNameSuffix>false</systemNameSuffix>
       </text>
       <helpsystem name="help">
          <origin>0.5 1</origin>
          <pos>0.5 0.94</pos>
-         <fontSize>0.026</fontSize>
-         <textColor>00000055</textColor>
-         <iconColor>00000033</iconColor>
+         <fontSize>0.025</fontSize><!-- 18 -->
+         <textColor>ffffff55</textColor>
+         <iconColor>ffffff33</iconColor>
       </helpsystem>
    </view>
 
    <view name="system">
+      <carousel name="carousel">
+         <staticImage>./_inc/systems/${system.theme}.png</staticImage>
+      </carousel>
+      <text name="system-name,auto-collection-name,custom-collection-name">
+         <pos>0.5234375 0.49</pos><!-- 670 50% -->
+      </text>
       <text name="system-name">
          <text>${system.fullName.noCollections}</text>
       </text>
       <text name="auto-collection-name">
          <text>${system.fullName.autoCollections}</text>
+         <letterCase>capitalize</letterCase>
       </text>
       <text name="custom-collection-name">
          <text>${system.fullName.customCollections}</text>
       </text>
       <text name="system-info">
-         <systemdata>gamecount</systemdata>
+         <origin>0 0</origin>
+         <pos>0.5234375 0.51</pos><!-- 670 50% -->
+         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
+         <fontSize>0.033333333333333</fontSize><!-- 24 -->
+         <fontPath>${regularFont}</fontPath>
+         <color>cccccc</color>
+         <verticalAlignment>top</verticalAlignment>
+         <lineSpacing>1</lineSpacing>
+         <systemdata>gamecountGames</systemdata>
       </text>
-      <carousel name="system-list">
-         <staticImage>./_inc/systems/${system.theme}.png</staticImage>
-      </carousel>
+      <gameselector name="selector-random">
+         <selection>random</selection>
+      </gameselector>
+      <image name="background-art">
+         <gameselector>selector-random</gameselector>
+         <imageType>screenshot</imageType>
+      </image>
    </view>
 
    <view name="gamelist">
+      <carousel name="carousel">
+         <imageType>cover,physicalmedia</imageType>
+      </carousel>
       <text name="game-name">
+         <pos>0.5234375 0.46</pos><!-- 670 50% -->
          <metadata>name</metadata>
       </text>
-      <text name="game-info">
-         <metadata>systemFullname</metadata>
-         <letterCase>capitalize</letterCase>
+      <text name="system-name">
+         <origin>0 1</origin>
+         <pos>0.5234375 0.49</pos><!-- 670 50% -->
+         <size>0.234375 0.025</size><!-- 300 18 -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+         <color>444444</color>
+         <fontPath>${boldFont}</fontPath>
+         <verticalAlignment>bottom</verticalAlignment>
+         <lineSpacing>1</lineSpacing>
+         <metadata>sourceSystemFullname</metadata>
       </text>
-      <carousel name="game-list">
-         <imageType>cover,physicalmedia,3dbox</imageType>
-      </carousel>
+      <video name="game-video">
+         <origin>0 0</origin>
+         <pos>0.5234375 0.51</pos><!-- 670 50% -->
+         <maxSize>0.15625 0.208333333333333</maxSize><!-- 200 150 -->
+         <pillarboxes>false</pillarboxes>
+         <delay>5</delay>
+      </video>
+      <image name="background-art">
+         <imageType>screenshot</imageType>
+      </image>
    </view>
 
 </theme>

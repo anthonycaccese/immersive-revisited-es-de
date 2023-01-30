@@ -4,8 +4,8 @@
       <gameselector name="selector-lastplayed">
          <selection>lastplayed</selection>
       </gameselector>
-   	<video name="background-video">
+   	<image name="background-art">
          <gameselector>selector-lastplayed</gameselector>
-   	</video>
+   	</image>
    </view>
 </theme>
