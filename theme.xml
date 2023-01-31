@@ -127,7 +127,10 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <text>${system.fullName.autoCollections}</text>
          <letterCase>capitalize</letterCase>
       </text>
-      <text name="system-name,auto-collection-name">
+      <text name="custom-collection-name">
+         <text>${system.fullName.customCollections}</text>
+      </text>
+      <text name="system-name,auto-collection-name,custom-collection-name">
          <origin>0 0</origin>
          <pos>0.04 0.06</pos><!-- 50% 660 -->
          <size>1 0</size><!-- 50% 24 -->
