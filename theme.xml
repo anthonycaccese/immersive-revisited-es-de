@@ -160,7 +160,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <folderLinkSize>0.8</folderLinkSize>
       </badges>
       <carousel name="carousel">
-         <imageType>cover,physicalmedia,titlescreen,marquee</imageType>
+         <imageType>cover</imageType>
       </carousel>
       <text name="game-name">
          <origin>0 1</origin>
