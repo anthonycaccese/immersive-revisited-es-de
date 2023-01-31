@@ -1,15 +1,6 @@
 <theme>
    <include>./../theme.xml</include>
    <view name="gamelist">
-      <text name="custom-collection-name">
-         <origin>0 0</origin>
-         <pos>0.12 0.06</pos><!-- 50% 660 -->
-         <size>0 0</size><!-- 300 18 -->
-         <metadata>systemFullname</metadata>
-         <fontSize>0.025</fontSize><!-- 18 -->
-         <color>444444</color>
-         <lineSpacing>1</lineSpacing>
-      </text>
       <text name="game-name">
          <pos>0.5234375 0.525</pos><!-- 670 378 -->
       </text>

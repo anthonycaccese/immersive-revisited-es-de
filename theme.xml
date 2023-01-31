@@ -14,7 +14,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    </variables>
 
    <view name="system,gamelist">
-      <image name="background">
+      <image name="background-color">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
@@ -30,30 +30,31 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <opacity>0.2</opacity>
          <zIndex>1</zIndex>
       </image>
-      <image name="mask">
+      <image name="background-mask">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
-         <path>./_inc/images/mask.png</path>
+         <path>./_inc/images/background-mask.png</path>
          <zIndex>2</zIndex>
       </image>
       <image name="seperator">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
-         <size>0.0015625 0.277777777777778</size>
+         <size>0.003125 0.058333333333333</size>
          <path>${spacerImage}</path>
          <tile>true</tile>
          <color>222222</color>
+         <metadataElement>true</metadataElement>
       </image>
       <carousel name="carousel">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
          <color>00000000</color>
-         <itemTransitions>animate</itemTransitions>
-         <unfocusedItemOpacity>.3</unfocusedItemOpacity>
          <itemSize>0.15625 0.361111111111111</itemSize><!-- 200 260  -->
          <itemScale>1.5</itemScale>
+         <unfocusedItemOpacity>0.3</unfocusedItemOpacity>
+         <itemTransitions>animate</itemTransitions>
          <maxItemCount>3</maxItemCount>
          <selectedItemMargins>-0.09375 0.1875</selectedItemMargins><!-- -120 240 -->
          <horizontalOffset>-0.140625</horizontalOffset><!-- -180 -->
@@ -62,20 +63,12 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <textColor>ffffff</textColor>
          <textBackgroundColor>222222</textBackgroundColor>
       </carousel>
-      <text name="system-name,auto-collection-name,custom-collection-name,game-name">
-         <origin>0 1</origin>
-         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
-         <fontSize>0.044444444444444</fontSize><!-- 32 -->
-         <color>ffffff</color>
-         <fontPath>${boldFont}</fontPath>
-         <verticalAlignment>bottom</verticalAlignment>
-         <lineSpacing>1</lineSpacing>
-         <systemNameSuffix>false</systemNameSuffix>
-      </text>
       <helpsystem name="help">
          <origin>0.5 1</origin>
-         <pos>0.5 0.94</pos>
+         <pos>0.5 0.94</pos><!-- 50% 660 -->
+         <fontPath>${regularFont}</fontPath>
          <fontSize>0.025</fontSize><!-- 18 -->
+         <letterCase>capitalize</letterCase>
          <textColor>ffffff55</textColor>
          <iconColor>ffffff33</iconColor>
       </helpsystem>
@@ -86,7 +79,15 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <staticImage>./_inc/systems/${system.theme}.png</staticImage>
       </carousel>
       <text name="system-name,auto-collection-name,custom-collection-name">
-         <pos>0.5234375 0.49</pos><!-- 670 50% -->
+         <origin>0 1</origin>
+         <pos>0.5234375 0.525</pos><!-- 670 378 -->
+         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
+         <fontSize>0.044444444444444</fontSize><!-- 32 -->
+         <fontPath>${boldFont}</fontPath>
+         <lineSpacing>1</lineSpacing>
+         <color>ffffff</color>
+         <verticalAlignment>bottom</verticalAlignment>
+         <systemNameSuffix>false</systemNameSuffix>
       </text>
       <text name="system-name">
          <text>${system.fullName.noCollections}</text>
@@ -100,14 +101,14 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </text>
       <text name="system-info">
          <origin>0 0</origin>
-         <pos>0.5234375 0.51</pos><!-- 670 50% -->
+         <pos>0.5234375 0.533333333333333</pos><!-- 670 384 -->
          <size>0.234375 0.208333333333333</size><!-- 300 150 -->
+         <systemdata>gamecountGames</systemdata>
          <fontSize>0.033333333333333</fontSize><!-- 24 -->
          <fontPath>${regularFont}</fontPath>
-         <color>cccccc</color>
-         <verticalAlignment>top</verticalAlignment>
          <lineSpacing>1</lineSpacing>
-         <systemdata>gamecountGames</systemdata>
+         <color>999999</color>
+         <verticalAlignment>top</verticalAlignment>
       </text>
       <gameselector name="selector-random">
          <selection>random</selection>
@@ -119,31 +120,83 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    </view>
 
    <view name="gamelist">
+      <text name="system-name">
+         <text>${system.fullName.noCollections}</text>
+      </text>
+      <text name="auto-collection-name">
+         <text>${system.fullName.autoCollections}</text>
+         <letterCase>capitalize</letterCase>
+      </text>
+      <text name="system-name,auto-collection-name">
+         <origin>0 0</origin>
+         <pos>0.04 0.06</pos><!-- 50% 660 -->
+         <size>1 0</size><!-- 50% 24 -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+         <fontPath>${boldFont}</fontPath>
+         <color>444444</color>
+         <lineSpacing>1</lineSpacing>
+      </text>
+      <text name="custom-collection-name">
+         <fontPath>${boldFont}</fontPath>
+      </text>
+      <badges name="badges">
+         <origin>1 0</origin>
+         <pos>0.96 0.06</pos><!-- 50% 660 -->
+         <size>0.234375 0.033333333333333</size><!-- 300 24 -->
+         <itemMargin>0.004 0.004</itemMargin>
+         <horizontalAlignment>right</horizontalAlignment>
+         <lines>1</lines>
+         <itemsPerLine>8</itemsPerLine>
+         <slots>all</slots>
+         <customBadgeIcon badge="folder">./_inc/images/badge-folder.svg</customBadgeIcon>
+         <customBadgeIcon badge="broken">./_inc/images/badge-broken.svg</customBadgeIcon>
+         <customBadgeIcon badge="completed">./_inc/images/badge-completed.svg</customBadgeIcon>
+         <customBadgeIcon badge="favorite">./_inc/images/badge-favorite.svg</customBadgeIcon>
+         <customBadgeIcon badge="kidgame">./_inc/images/badge-kidgame.svg</customBadgeIcon>
+         <customBadgeIcon badge="collection">./_inc/images/badge-collection.svg</customBadgeIcon>
+         <customBadgeIcon badge="controller">./_inc/images/badge-controller.svg</customBadgeIcon>
+         <customBadgeIcon badge="altemulator">./_inc/images/badge-altemulator.svg</customBadgeIcon>
+         <controllerSize>0.8</controllerSize>
+         <folderLinkSize>0.8</folderLinkSize>
+      </badges>
       <carousel name="carousel">
-         <imageType>cover,physicalmedia</imageType>
+         <imageType>cover,physicalmedia,titlescreen,marquee</imageType>
       </carousel>
       <text name="game-name">
-         <pos>0.5234375 0.46</pos><!-- 670 50% -->
-         <metadata>name</metadata>
-      </text>
-      <text name="system-name">
          <origin>0 1</origin>
-         <pos>0.5234375 0.49</pos><!-- 670 50% -->
+         <pos>0.5234375 0.525</pos><!-- 670 378 -->
+         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
+         <metadata>name</metadata>
+         <fontSize>0.044444444444444</fontSize><!-- 32 -->
+         <fontPath>${boldFont}</fontPath>
+         <lineSpacing>1</lineSpacing>
+         <color>ffffff</color>
+         <verticalAlignment>bottom</verticalAlignment>
+         <systemNameSuffix>false</systemNameSuffix>
+      </text>
+      <text name="source-system-name">
+         <origin>0 0</origin>
+         <pos>0.5234375 0.533333333333333</pos><!-- 670 384 -->
          <size>0.234375 0.025</size><!-- 300 18 -->
          <fontSize>0.025</fontSize><!-- 18 -->
          <color>444444</color>
-         <fontPath>${boldFont}</fontPath>
+         <fontPath>${regularFont}</fontPath>
          <verticalAlignment>bottom</verticalAlignment>
          <lineSpacing>1</lineSpacing>
-         <metadata>sourceSystemFullname</metadata>
+         <metadataElement>true</metadataElement>
       </text>
-      <video name="game-video">
+      <text name="game-description">
          <origin>0 0</origin>
-         <pos>0.5234375 0.51</pos><!-- 670 50% -->
-         <maxSize>0.15625 0.208333333333333</maxSize><!-- 200 150 -->
-         <pillarboxes>false</pillarboxes>
-         <delay>5</delay>
-      </video>
+         <pos>0.5234375 0.541666666666667</pos><!-- 670 390 -->
+         <size>0.234375 0.208333333333333</size><!-- 300 150 -->
+         <fontSize>0.025</fontSize><!-- 18 -->
+         <color>bbbbbb</color>
+         <fontPath>${regularFont}</fontPath>
+         <verticalAlignment>bottom</verticalAlignment>
+         <metadata>description</metadata>
+         <container>true</container>
+         <containerStartDelay>6</containerStartDelay>
+      </text>
       <image name="background-art">
          <imageType>screenshot</imageType>
       </image>
