@@ -27,7 +27,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <maxSize>1.4 2</maxSize>
-         <opacity>0.2</opacity>
+         <opacity>0.4</opacity>
          <zIndex>1</zIndex>
       </image>
       <image name="background-mask">
