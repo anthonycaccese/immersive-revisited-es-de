@@ -136,7 +136,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <size>1 0</size><!-- 50% 24 -->
          <fontSize>0.025</fontSize><!-- 18 -->
          <fontPath>${boldFont}</fontPath>
-         <color>444444</color>
+         <color>ffffff77</color>
          <lineSpacing>1</lineSpacing>
       </text>
       <text name="custom-collection-name">
