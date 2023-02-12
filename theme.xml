@@ -53,8 +53,8 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <color>00000000</color>
          <itemSize>0.15625 0.361111111111111</itemSize><!-- 200 260  -->
          <itemScale>1.5</itemScale>
+         <defaultImage>./_inc/images/folder.png</defaultImage>
          <unfocusedItemOpacity>0.3</unfocusedItemOpacity>
-         <itemTransitions>animate</itemTransitions>
          <maxItemCount>3</maxItemCount>
          <selectedItemMargins>-0.09375 0.1875</selectedItemMargins><!-- -120 240 -->
          <horizontalOffset>-0.140625</horizontalOffset><!-- -180 -->

@@ -6,9 +6,9 @@
       <label>transitions</label>
       <selectable>false</selectable>
       <systemToSystem>fade</systemToSystem>
-      <systemToGamelist>slide</systemToGamelist>
-      <gamelistToGamelist>slide</gamelistToGamelist>
-      <gamelistToSystem>slide</gamelistToSystem>
+      <systemToGamelist>fade</systemToGamelist>
+      <gamelistToGamelist>fade</gamelistToGamelist>
+      <gamelistToSystem>fade</gamelistToSystem>
       <startupToSystem>fade</startupToSystem>
       <startupToGamelist>fade</startupToGamelist>
    </transitions>
