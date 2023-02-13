@@ -23,13 +23,6 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <color>000000</color>
          <zIndex>0</zIndex>
       </image>
-      <image name="background-art">
-         <origin>0.5 0.5</origin>
-         <pos>0.5 0.5</pos>
-         <maxSize>1.4 2</maxSize>
-         <opacity>0.4</opacity>
-         <zIndex>1</zIndex>
-      </image>
       <image name="background-mask">
          <origin>0 0</origin>
          <pos>0 0</pos>
@@ -53,7 +46,6 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <color>00000000</color>
          <itemSize>0.15625 0.361111111111111</itemSize><!-- 200 260  -->
          <itemScale>1.5</itemScale>
-         <defaultImage>./_inc/images/folder.png</defaultImage>
          <unfocusedItemOpacity>0.3</unfocusedItemOpacity>
          <maxItemCount>3</maxItemCount>
          <selectedItemMargins>-0.09375 0.1875</selectedItemMargins><!-- -120 240 -->
@@ -73,6 +65,28 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <iconColor>ffffff33</iconColor>
       </helpsystem>
    </view>
+   <variant name="backgroundArtScreenshot">
+      <view name="system,gamelist">
+         <image name="background-art">
+            <origin>0.5 0.5</origin>
+            <pos>0.5 0.5</pos>
+            <maxSize>1.4 2</maxSize>
+            <opacity>0.4</opacity>
+            <zIndex>1</zIndex>
+         </image>
+      </view>
+   </variant>
+   <variant name="backgroundArtVideo">
+      <view name="system,gamelist">
+         <video name="background-art">
+            <origin>0.5 0.5</origin>
+            <pos>0.5 0.5</pos>
+            <maxSize>1.4 2</maxSize>
+            <opacity>0.4</opacity>
+            <zIndex>1</zIndex>
+         </video>
+      </view>
+   </variant>
 
    <view name="system">
       <carousel name="carousel">
@@ -113,11 +127,25 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <gameselector name="selector-random">
          <selection>random</selection>
       </gameselector>
-      <image name="background-art">
-         <gameselector>selector-random</gameselector>
-         <imageType>screenshot</imageType>
-      </image>
    </view>
+   <variant name="backgroundArtScreenshot">
+      <view name="system">
+         <image name="background-art">
+            <gameselector>selector-random</gameselector>
+            <imageType>screenshot</imageType>
+         </image>
+      </view>
+   </variant>
+   <variant name="backgroundArtVideo">
+      <view name="system">
+         <video name="background-art">
+            <gameselector>selector-random</gameselector>
+            <imageType>screenshot</imageType>
+            <delay>3</delay>
+            <pillarboxes>false</pillarboxes>
+         </video>
+      </view>
+   </variant>
 
    <view name="gamelist">
       <text name="system-name">
@@ -138,9 +166,6 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <fontPath>${boldFont}</fontPath>
          <color>ffffff77</color>
          <lineSpacing>1</lineSpacing>
-      </text>
-      <text name="custom-collection-name">
-         <fontPath>${boldFont}</fontPath>
       </text>
       <badges name="badges">
          <origin>1 0</origin>
@@ -164,6 +189,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </badges>
       <carousel name="carousel">
          <imageType>cover</imageType>
+         <defaultImage>./_inc/images/folder.png</defaultImage>
       </carousel>
       <text name="game-name">
          <origin>0 1</origin>
@@ -177,7 +203,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <verticalAlignment>bottom</verticalAlignment>
          <systemNameSuffix>false</systemNameSuffix>
       </text>
-      <text name="source-system-name">
+      <text name="source-system-name"><!-- only displayed on autocollections and customcollections -->
          <origin>0 0</origin>
          <pos>0.5234375 0.533333333333333</pos><!-- 670 384 -->
          <size>0.234375 0.025</size><!-- 300 18 -->
@@ -200,9 +226,22 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <container>true</container>
          <containerStartDelay>6</containerStartDelay>
       </text>
-      <image name="background-art">
-         <imageType>screenshot</imageType>
-      </image>
    </view>
+   <variant name="backgroundArtScreenshot">
+      <view name="gamelist">
+         <image name="background-art">
+            <imageType>screenshot</imageType>
+         </image>
+      </view>
+   </variant>
+   <variant name="backgroundArtVideo">
+      <view name="gamelist">
+         <video name="background-art">
+            <imageType>screenshot</imageType>
+            <delay>3</delay>
+            <pillarboxes>false</pillarboxes>
+         </video>
+      </view>
+   </variant>
 
 </theme>

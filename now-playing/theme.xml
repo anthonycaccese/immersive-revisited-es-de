@@ -4,7 +4,24 @@
       <text name="custom-collection-name">
          <text>Now Playing</text>
       </text>
+      <gameselector name="selector-lastplayed">
+         <selection>lastplayed</selection>
+      </gameselector>
    </view>
+   <variant name="backgroundArtScreenshot">
+      <view name="system">
+         <image name="background-art">
+            <gameselector>selector-lastplayed</gameselector>
+         </image>
+      </view>
+   </variant>
+   <variant name="backgroundArtVideo">
+      <view name="system">
+         <video name="background-art">
+            <gameselector>selector-lastplayed</gameselector>
+         </video>
+      </view>
+   </variant>
    <view name="gamelist">
       <text name="custom-collection-name">
          <text>Now Playing</text>

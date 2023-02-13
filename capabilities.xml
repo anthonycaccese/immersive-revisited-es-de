@@ -2,13 +2,17 @@
    
    <themeName>Immersive (Revisited)</themeName>
 
+   <aspectRatio>16:9</aspectRatio>
+   <aspectRatio>16:10</aspectRatio>
+   <aspectRatio>4:3</aspectRatio>
+
    <transitions name="transitions">
       <label>transitions</label>
       <selectable>false</selectable>
       <systemToSystem>fade</systemToSystem>
-      <systemToGamelist>fade</systemToGamelist>
+      <systemToGamelist>instant</systemToGamelist>
       <gamelistToGamelist>fade</gamelistToGamelist>
-      <gamelistToSystem>fade</gamelistToSystem>
+      <gamelistToSystem>instant</gamelistToSystem>
       <startupToSystem>fade</startupToSystem>
       <startupToGamelist>fade</startupToGamelist>
    </transitions>
@@ -17,5 +21,14 @@
       <entry>builtin-slide</entry>
       <entry>builtin-fade</entry>
    </suppressTransitionProfiles>
+
+   <variant name="backgroundArtScreenshot">
+      <label>Background Screenshot</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="backgroundArtVideo">
+      <label>Background Video</label>
+      <selectable>true</selectable>
+   </variant>
 
 </themeCapabilities>

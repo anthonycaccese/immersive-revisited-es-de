@@ -3,7 +3,6 @@
    <view name="gamelist">
       <text name="custom-collection-name">
          <origin>0 0</origin>
-         <pos>0.1275 0.06</pos>
          <size>0 0</size>
          <metadata>systemFullname</metadata>
          <color>ffffff55</color>
@@ -19,4 +18,25 @@
          <pos>0.5234375 0.569444444444444</pos><!-- 670 410 -->
       </text>
    </view>
+   <aspectRatio name="16:9">
+      <view name="gamelist">
+         <text name="custom-collection-name">
+            <pos>0.12 0.06</pos>
+         </text>
+      </view>
+   </aspectRatio>
+   <aspectRatio name="16:10">
+      <view name="gamelist">
+         <text name="custom-collection-name">
+            <pos>0.13 0.06</pos>
+         </text>
+      </view>
+   </aspectRatio>
+   <aspectRatio name="4:3">
+      <view name="gamelist">
+         <text name="custom-collection-name">
+            <pos>0.146 0.06</pos>
+         </text>
+      </view>
+   </aspectRatio>
 </theme>
