@@ -189,7 +189,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </badges>
       <carousel name="carousel">
          <imageType>cover</imageType>
-         <defaultImage>./_inc/images/folder.png</defaultImage>
+         <defaultFolderImage>./_inc/images/folder.png</defaultFolderImage>
       </carousel>
       <text name="game-name">
          <origin>0 1</origin>
