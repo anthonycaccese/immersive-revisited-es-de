@@ -54,6 +54,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <fontSize>0.025</fontSize><!-- 18 -->
          <textColor>ffffff</textColor>
          <textBackgroundColor>222222</textBackgroundColor>
+         <fastScrolling>true</fastScrolling>
       </carousel>
       <helpsystem name="help">
          <origin>0.5 1</origin>
