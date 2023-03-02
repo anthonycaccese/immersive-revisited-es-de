@@ -69,9 +69,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    <variant name="backgroundArtScreenshot">
       <view name="system,gamelist">
          <image name="background-art">
-            <origin>0.5 0.5</origin>
-            <pos>0.5 0.5</pos>
-            <maxSize>1.4 2</maxSize>
+            <cropSize>1 1</cropSize>
             <opacity>0.5</opacity>
             <zIndex>1</zIndex>
          </image>
@@ -80,9 +78,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    <variant name="backgroundArtVideo">
       <view name="system,gamelist">
          <video name="background-art">
-            <origin>0.5 0.5</origin>
-            <pos>0.5 0.5</pos>
-            <maxSize>1.4 2</maxSize>
+            <cropSize>1 1</cropSize>
             <opacity>0.5</opacity>
             <zIndex>1</zIndex>
          </video>
