@@ -46,7 +46,8 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <color>00000000</color>
          <itemSize>0.15625 0.361111111111111</itemSize><!-- 200 260  -->
          <itemScale>1.5</itemScale>
-         <unfocusedItemOpacity>0.3</unfocusedItemOpacity>
+         <unfocusedItemOpacity>1</unfocusedItemOpacity>
+         <unfocusedItemDimming>0.4</unfocusedItemDimming>
          <maxItemCount>3</maxItemCount>
          <selectedItemMargins>-0.09375 0.1875</selectedItemMargins><!-- -120 240 -->
          <horizontalOffset>-0.140625</horizontalOffset><!-- -180 -->
@@ -69,9 +70,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    <variant name="backgroundArtScreenshot">
       <view name="system,gamelist">
          <image name="background-art">
-            <origin>0.5 0.5</origin>
-            <pos>0.5 0.5</pos>
-            <maxSize>1.4 2</maxSize>
+            <cropSize>1 1</cropSize>
             <opacity>0.5</opacity>
             <zIndex>1</zIndex>
          </image>
@@ -80,9 +79,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    <variant name="backgroundArtVideo">
       <view name="system,gamelist">
          <video name="background-art">
-            <origin>0.5 0.5</origin>
-            <pos>0.5 0.5</pos>
-            <maxSize>1.4 2</maxSize>
+            <cropSize>1 1</cropSize>
             <opacity>0.5</opacity>
             <zIndex>1</zIndex>
          </video>
