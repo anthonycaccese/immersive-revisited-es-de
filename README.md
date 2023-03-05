@@ -2,7 +2,7 @@
 A simple theme for the version of EmulationStation used in [ES-DE](https://es-de.org/) v2.x.  The design is inspired by the great work by Darren Carol (aka Mr. Overlay) on the [Immersive theme](https://github.com/DarrenCarol/Immersive) for Batocera.
 
 ## Changes Made from the Batocera version
-* Rdesigned the design/layout of system and gamelist views 
+* Redesigned the design/layout of system and gamelist views 
 * Removed all Batocera specific elements to make the theme compatible with ES-DE's theming engine
 * Updated system image names to match the standard used by RetroPie and ES-DE
 * Added controller/icon artwork for each system
