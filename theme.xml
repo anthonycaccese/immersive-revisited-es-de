@@ -172,7 +172,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <itemMargin>0.004 0.004</itemMargin>
          <horizontalAlignment>right</horizontalAlignment>
          <lines>1</lines>
-         <itemsPerLine>8</itemsPerLine>
+         <itemsPerLine>9</itemsPerLine>
          <slots>all</slots>
          <customBadgeIcon badge="folder">./_inc/images/badge-folder.svg</customBadgeIcon>
          <customBadgeIcon badge="broken">./_inc/images/badge-broken.svg</customBadgeIcon>
@@ -182,6 +182,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <customBadgeIcon badge="collection">./_inc/images/badge-collection.svg</customBadgeIcon>
          <customBadgeIcon badge="controller">./_inc/images/badge-controller.svg</customBadgeIcon>
          <customBadgeIcon badge="altemulator">./_inc/images/badge-altemulator.svg</customBadgeIcon>
+         <customBadgeIcon badge="manual">./_inc/images/badge-manual.svg</customBadgeIcon>
          <controllerSize>0.8</controllerSize>
          <folderLinkSize>0.8</folderLinkSize>
       </badges>
