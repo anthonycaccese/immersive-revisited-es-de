@@ -36,7 +36,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <size>0.003125 0.058333333333333</size>
          <path>${spacerImage}</path>
          <tile>true</tile>
-         <color>222222</color>
+         <color>ffffff77</color>
          <metadataElement>true</metadataElement>
       </image>
       <carousel name="carousel">
@@ -168,7 +168,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <badges name="badges">
          <origin>1 0</origin>
          <pos>0.96 0.06</pos><!-- 50% 660 -->
-         <size>0.234375 0.033333333333333</size><!-- 300 24 -->
+         <size>0.9 0.058333333333333</size><!-- 300 24 -->
          <itemMargin>0.004 0.004</itemMargin>
          <horizontalAlignment>right</horizontalAlignment>
          <lines>1</lines>
@@ -242,5 +242,29 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </video>
       </view>
    </variant>
+
+   <view name="all">
+      <sound name="systembrowse">
+         <path>./_inc/sounds/systembrowse.wav</path>
+      </sound>
+      <sound name="quicksysselect">
+         <path>./_inc/sounds/quicksysselect.wav</path>
+      </sound>
+      <sound name="select">
+         <path>./_inc/sounds/select.wav</path>
+      </sound>
+      <sound name="back">
+         <path>./_inc/sounds/back.wav</path>
+      </sound>
+      <sound name="scroll">
+         <path>./_inc/sounds/scroll.wav</path>
+      </sound>
+      <sound name="favorite">
+         <path>./_inc/sounds/favorite.wav</path>
+      </sound>
+      <sound name="launch">
+         <path>./_inc/sounds/launch.wav</path>
+      </sound>
+   </view>
 
 </theme>
