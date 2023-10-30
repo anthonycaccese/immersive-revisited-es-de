@@ -1,0 +1,39 @@
+<theme>
+   <include>./../theme.xml</include>
+   <view name="system">
+      <text name="custom-collection-name">
+         <text>Completed</text>
+      </text>
+      <gameselector name="selector-lastplayed">
+         <selection>lastplayed</selection>
+      </gameselector>
+   </view>
+   <variant name="backgroundArtScreenshot">
+      <view name="system">
+         <image name="background-art">
+            <gameselector>selector-lastplayed</gameselector>
+         </image>
+      </view>
+   </variant>
+   <variant name="backgroundArtVideo">
+      <view name="system">
+         <video name="background-art">
+            <gameselector>selector-lastplayed</gameselector>
+         </video>
+      </view>
+   </variant>
+   <view name="gamelist">
+      <text name="custom-collection-name">
+         <text>Completed</text>
+      </text>
+      <text name="game-name">
+         <pos>0.5234375 0.525</pos><!-- 670 378 -->
+      </text>
+      <text name="source-system-name">
+         <metadata>sourceSystemFullname</metadata>
+      </text>
+      <text name="game-description">
+         <pos>0.5234375 0.569444444444444</pos><!-- 670 410 -->
+      </text>
+   </view>
+</theme>

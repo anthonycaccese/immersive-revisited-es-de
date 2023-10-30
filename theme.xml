@@ -89,6 +89,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    <view name="system">
       <carousel name="carousel">
          <staticImage>./_inc/systems/${system.theme}.png</staticImage>
+         <defaultImage>./_inc/images/folder.png</defaultImage>
       </carousel>
       <text name="system-name,auto-collection-name,custom-collection-name">
          <origin>0 1</origin>
