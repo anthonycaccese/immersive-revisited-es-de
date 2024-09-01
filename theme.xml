@@ -117,6 +117,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <pos>0.5234375 0.533333333333333</pos><!-- 670 384 -->
          <size>0.234375 0.208333333333333</size><!-- 300 150 -->
          <systemdata>gamecountGames</systemdata>
+         <letterCase>capitalize</letterCase>
          <fontSize>0.033333333333333</fontSize><!-- 24 -->
          <fontPath>${regularFont}</fontPath>
          <lineSpacing>1</lineSpacing>
