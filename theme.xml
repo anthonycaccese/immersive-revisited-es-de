@@ -30,6 +30,24 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <path>./_inc/images/background-mask.png</path>
          <zIndex>2</zIndex>
       </image>
+      <clock name="clock">
+         <opacity>0</opacity>
+      </clock>
+      <systemstatus name="system-status">
+         <origin>1 0</origin>
+         <pos>0.96 0.06</pos>
+         <fontPath>${regularFont}</fontPath>
+         <textRelativeScale>0.75</textRelativeScale>
+         <height>0.03333333</height><!-- 24 -->
+         <customIcon icon="icon_bluetooth">./_inc/images/icon-bluetooth.svg</customIcon>
+         <customIcon icon="icon_wifi">./_inc/images/icon-wifi.svg</customIcon>
+         <customIcon icon="icon_cellular">./_inc/images/icon-cellular.svg</customIcon>
+         <customIcon icon="icon_battery_charging">./_inc/images/icon-battery-charging.svg</customIcon>
+         <customIcon icon="icon_battery_full">./_inc/images/icon-battery-full.svg</customIcon>
+         <customIcon icon="icon_battery_high">./_inc/images/icon-battery-high.svg</customIcon>
+         <customIcon icon="icon_battery_medium">./_inc/images/icon-battery-medium.svg</customIcon>
+         <customIcon icon="icon_battery_low">./_inc/images/icon-battery-low.svg</customIcon>
+      </systemstatus>
       <image name="seperator">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
@@ -58,13 +76,26 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <fastScrolling>true</fastScrolling>
       </carousel>
       <helpsystem name="help">
+         <scope>view</scope>
          <origin>0.5 1</origin>
          <pos>0.5 0.94</pos><!-- 50% 660 -->
          <fontPath>${regularFont}</fontPath>
-         <fontSize>0.025</fontSize><!-- 18 -->
+         <fontSize>0.03333333</fontSize><!-- 24 -->
          <letterCase>capitalize</letterCase>
          <textColor>ffffff55</textColor>
          <iconColor>ffffff33</iconColor>
+         <entries>start,back,a,b,x,y</entries>
+      </helpsystem>
+      <helpsystem name="help-menu-view">
+         <scope>menu</scope>
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.95</pos>
+         <iconColor>cccccc</iconColor>
+         <textColor>cccccc</textColor>
+         <backgroundColor>181818</backgroundColor>
+         <backgroundHorizontalPadding>0.05 0.05</backgroundHorizontalPadding>
+         <backgroundVerticalPadding>0.05 0.05</backgroundVerticalPadding>
+         <backgroundCornerRadius>0.005</backgroundCornerRadius>
       </helpsystem>
    </view>
    <variant name="backgroundArtScreenshot">
@@ -168,23 +199,19 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <lineSpacing>1</lineSpacing>
       </text>
       <badges name="badges">
-         <origin>1 0</origin>
-         <pos>0.96 0.06</pos><!-- 50% 660 -->
+         <origin>0 0</origin>
+         <pos>0.5234375 0.245</pos>
          <size>0.9 0.058333333333333</size><!-- 300 24 -->
          <itemMargin>0.004 0.004</itemMargin>
-         <horizontalAlignment>right</horizontalAlignment>
+         <horizontalAlignment>left</horizontalAlignment>
          <lines>1</lines>
          <itemsPerLine>9</itemsPerLine>
-         <slots>all</slots>
+         <slots>folder,completed,favorite,collection,altemulator</slots>
          <customBadgeIcon badge="folder">./_inc/images/badge-folder.svg</customBadgeIcon>
-         <customBadgeIcon badge="broken">./_inc/images/badge-broken.svg</customBadgeIcon>
          <customBadgeIcon badge="completed">./_inc/images/badge-completed.svg</customBadgeIcon>
          <customBadgeIcon badge="favorite">./_inc/images/badge-favorite.svg</customBadgeIcon>
-         <customBadgeIcon badge="kidgame">./_inc/images/badge-kidgame.svg</customBadgeIcon>
          <customBadgeIcon badge="collection">./_inc/images/badge-collection.svg</customBadgeIcon>
-         <customBadgeIcon badge="controller">./_inc/images/badge-controller.svg</customBadgeIcon>
          <customBadgeIcon badge="altemulator">./_inc/images/badge-altemulator.svg</customBadgeIcon>
-         <customBadgeIcon badge="manual">./_inc/images/badge-manual.svg</customBadgeIcon>
          <controllerSize>0.8</controllerSize>
          <folderLinkSize>0.8</folderLinkSize>
       </badges>
